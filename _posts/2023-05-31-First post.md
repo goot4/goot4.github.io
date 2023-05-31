@@ -3,7 +3,7 @@ title: Make a editor tool window to present specified data using UI Toolkit
 date: 2023-05-31 13:26:00 +0800
 categories: [Unity, UI]
 tags: [uiToolkit, tool, tutorial]     # TAG names should always be lowercase
-img_path: /assets/img/
+img_path: /assets/img/posts
 ---
 
 ## Abstract
