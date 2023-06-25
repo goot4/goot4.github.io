@@ -1,0 +1,34 @@
+---
+title: "Unity Shader Resources Summary"
+date: 2023-06-25 17:02:00 +0800
+categories: [Unity, Shader]
+tags: [shader, shaderGraph, resources]     # TAG names should always be lowercase
+img_path: /assets/img/posts
+---
+
+## Abstract
+
+This post list out tutorials and resources I came across when I start learning Unity Shader. I hope this post could save time for starters just like me.
+
+## Shader
+
+### Tutorials
+
+[Unity Learn - Shaders and materials](https://learn.unity.com/mission/creative-core-shaders-and-materials)
+
+## Shader Graph
+
+### Unity Package Doc
+
+[About Shader Graph | Shader Graph | 16.0.1 (unity3d.com)](https://docs.unity3d.com/Packages/com.unity.shadergraph@16.0/manual/index.html) include:
+- [My first Shader Graph](https://docs.unity3d.com/Packages/com.unity.shadergraph@16.0/manual/First-Shader-Graph.html): starter level, learn how to create a new shader graph and apply it to a gameObject through material. 
+
+### Unity Blogs
+
+[Creating an Interactive Vertex Effect using Shader Graph](https://blog.unity.com/technology/creating-an-interactive-vertex-effect-using-shader-graph): 2019-Feb-12.
+
+### Youtube Tutorials
+
+## My Thinking
+
+The Unity shader graph itself is simple, but you need lots of knowledge about Shader to design what you want to create.
