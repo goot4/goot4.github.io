@@ -8,20 +8,30 @@ img_path: /assets/img/posts
 
 ## Abstract
 
-This post list out tutorials and resources I came across when I start learning Unity Shader. I hope this post could save time for starters just like me.
+This post lists out tutorials and resources I came across when I start learning Unity Shader. I hope this post could save time for starters just like me.
 
 ## Shader
 
+### Unity Doc
+
+[Normal Map](https://docs.unity3d.com/Manual/StandardShaderMaterialParameterNormalMap.html): an excellent illustrated explanation of bump mapping. 
+
+[Material chart](https://docs.unity3d.com/Manual/StandardShaderMaterialCharts.html)
+
 ### Tutorials
 
-[Unity Learn - Shaders and materials](https://learn.unity.com/mission/creative-core-shaders-and-materials)
+[Unity Learn - Shaders and materials](https://learn.unity.com/mission/creative-core-shaders-and-materials) include:
+- Introduction to Mesh, Material, Shader and their relationships.
+- How to use and manage shaders and materials in Unity projects.
+- practice of creating solid, translucent, physical effects.
+- Get started with Shader Graph
 
 ## Shader Graph
 
 ### Unity Package Doc
 
 [About Shader Graph | Shader Graph | 16.0.1 (unity3d.com)](https://docs.unity3d.com/Packages/com.unity.shadergraph@16.0/manual/index.html) include:
-- [My first Shader Graph](https://docs.unity3d.com/Packages/com.unity.shadergraph@16.0/manual/First-Shader-Graph.html): starter level, learn how to create a new shader graph and apply it to a gameObject through material. 
+- [My first Shader Graph](https://docs.unity3d.com/Packages/com.unity.shadergraph@16.0/manual/First-Shader-Graph.html): starter level, learn how to create a new shader graph and apply it to a game object through materials. 
 
 ### Unity Blogs
 
