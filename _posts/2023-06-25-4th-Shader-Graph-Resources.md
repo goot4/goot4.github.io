@@ -24,7 +24,7 @@ This post lists out tutorials and resources I came across when I start learning 
 - Introduction to Mesh, Material, Shader and their relationships.
 - How to use and manage shaders and materials in Unity projects.
 - practice of creating solid, translucent, physical effects.
-- Get started with Shader Graph
+- Get started with Shader Graph.
 
 ## Shader Graph
 
@@ -37,7 +37,9 @@ This post lists out tutorials and resources I came across when I start learning 
 
 [Creating an Interactive Vertex Effect using Shader Graph](https://blog.unity.com/technology/creating-an-interactive-vertex-effect-using-shader-graph): 2019-Feb-12.
 
-### Youtube Tutorials
+### Tutorials
+
+[Get started with Shader Graph](https://learn.unity.com/tutorial/get-started-with-shader-graph?labelRequired%253Dtrue%2526pathwayId%253D61a65568edbc2a00206076dd%2526missionId%253D619f9b6cedbc2a39aabd7b1e#63689360edbc2a30a18b3683)
 
 ## My Thinking
 
