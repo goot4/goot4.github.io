@@ -1,0 +1,15 @@
+
+section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    padding: 50px;
+}
+section p {
+    color: black;
+    font-size: 80px;
+}
