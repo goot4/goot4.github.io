@@ -1,0 +1,12 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    padding: 50px;
+}
+main p {
+    color: white;
+    font-size: 80px;
+}
