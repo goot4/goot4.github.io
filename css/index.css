@@ -1,4 +1,8 @@
-main {
+#cover {
+    display: flex;
+    flex-direction: column;
+}
+#cover .row {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,7 +10,8 @@ main {
     text-orientation: mixed;
     padding: 50px;
 }
-main p {
+#cover .row p {
     color: white;
-    font-size: 80px;
+    font-size: 30px;
+    padding: 20px;
 }
