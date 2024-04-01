@@ -1,17 +1,13 @@
 #cover {
-    display: flex;
-    flex-direction: column;
-}
-#cover .row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    padding: 50px;
-}
-#cover .row p {
     color: white;
     font-size: 30px;
-    padding: 20px;
+    text-align: start;
+    margin-top: 20px;
+    margin-right: 10vw;
+
+    width: 90vw;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    writing-mode: vertical-rl;
 }
