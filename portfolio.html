@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Zeeebra G's Website</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' type='text/css'>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
 <body>
-<div id="root">
-    <header>
-        <nav class="main-nav">
+<header>
+    <h1>Zeeebra G</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Blog</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<div class="main-wrapper">
+    <div class="sidebar-container">
+        <aside class="sidebar">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="tech_blogs.html">Tech blogs</a></li>
-                <li><a href="other_blogs.html">Other blogs</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio/resume.html">简历</a></li>
+                <li><a href="#">项目</a></li>
+                <li><a href="#">杂项</a></li>
             </ul>
-        </nav>
-    </header>
-
-    <div class="main-wrapper">
-        <div class="sidebar-container">
-            <aside id="sidebar" class ="left-nav">
-                <nav class="secondary-nav">
-                    <ul>
-                        <li><a href="portfolio.html">Projects</a></li>
-                        <li><a href="portfolio/portfolio_trinkets.html">Trinkets</a></li>
-                        <li><a href="portfolio/portfolio_resume.html">Resume</a></li>
-                    </ul>
-                </nav>
-            </aside>
-        </div>
-        <main id="content" class="main-content">
-            <section>
-                <h1>Example article</h1>
-                <p>blog list displayed here</p>
-            </section>
-        </main>
+        </aside>
     </div>
-
-    <footer>
-        <p>&copy; 2024 My Personal Website. All rights reserved.</p>
-    </footer>
+    <main id="content" class="main-content">
+        <article class="main-page-content" lang="zh-CN">
+            <h1>展示</h1>
+            <p>欢迎来到展示, 展示区分为三部分内容, 请使用左边导航栏進行浏览.</p>
+            <h2>简历</h2>
+            <p>介绍个人职业信息</p>
+            <h2>项目</h2>
+            <p>展示主要项目</p>
+            <h2>杂项</h2>
+            <p>展示小型项目和学习项目, 主要用于存档.</p>
+        </article>
+    </main>
+<!--    <div class="toc-container">-->
+<!--        <h3>Link list</h3>-->
+<!--        <ul>-->
+<!--            <li><a href="#">link</a></li>-->
+<!--        </ul>-->
+<!--    </div>-->
 </div>
 
-
+<footer>
+    <p>&copy; 2024 Zeeebra G's Website. All rights reserved.</p>
+    <ul>
+        <li><a href="https://github.com/">Github</a></li>
+        <li><a href="https://x.com/">X</a></li>
+        <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+    </ul>
+</footer>
 </body>
 </html>
