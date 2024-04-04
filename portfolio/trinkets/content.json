@@ -1,0 +1,15 @@
+{
+  "projectList": [
+    {
+      "projectName": "excursion --simple ad page",
+      "projectCover": "../img/trinkets-cover/excursion-cover.png",
+      "type": "learning project",
+      "time": "2024/3/26",
+      "tag": "html align-center",
+      "description": "A very simple learning project, my first project learned from Codecademy. text, img, video html element lay in center.",
+      "note": "Video autoplay is not allowed in many browsers",
+      "link": "trinkets/excursion/index.html",
+      "code": "portfolio/trinkets/excursion/"
+    }
+  ]
+}
