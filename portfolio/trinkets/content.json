@@ -1,6 +1,17 @@
 {
   "projectList": [
     {
+      "projectName": "film finder --standard request",
+      "projectCover": "../img/trinkets-cover/film-finder.png",
+      "type": "learning project",
+      "time": "2024/4/9",
+      "tag": "HTTP-request fetch TMDB-api",
+      "description": "using fetch and api to show movie info.",
+      "note": "need TMDB api key to run the project.",
+      "link": "./film-finder/index.html",
+      "code": "portfolio/trinkets/film-finder/"
+    },
+    {
       "projectName": "excursion --simple ad page",
       "projectCover": "../img/trinkets-cover/excursion-cover.png",
       "type": "learning project",
