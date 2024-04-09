@@ -1,6 +1,17 @@
 {
   "projectList": [
     {
+      "projectName": "vue-form-ticketbox",
+      "projectCover": "../img/trinkets-cover/vue-form-ticketbox.png",
+      "type": "learning project",
+      "time": "2024/4/3",
+      "tag": "vue-template vue-directive vue-modifier",
+      "description": "Second learning project for Vue on Codecademy.",
+      "note": "tech used: v-bind, v-model, v-on:click computed, watch, methods, modifier",
+      "link": "./vue-form-ticketbox/index.html",
+      "code": "portfolio/trinkets/vue-form-ticketbox/"
+    },
+    {
       "projectName": "vue-view-twitter",
       "projectCover": "../img/trinkets-cover/vue-view-twitter.png",
       "type": "learning project",
