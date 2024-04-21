@@ -15,9 +15,9 @@ export function getPostBySlug(slug: string){
   const realSlug =  slug.replace(/\.mdx$/,"");
   const fullPath = join(postsDirectory,`${realSlug}.mdx`);
   const fileContent = fs.readFileSync(fullPath, "utf-8");
-  const {data} = matter(fileContent);
+  const {data,content} = matter(fileContent);
 
-  return { ...data, slug: realSlug } as Post;
+  return { ...data, slug: realSlug, content} as Post;
 }
 
 export function getAllPosts(): Post[]{
