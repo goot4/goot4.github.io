@@ -2,6 +2,8 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { Bars3Icon } from "@heroicons/react/24/outline"
 
 const links = [
   { name: "Home", href: "/" },
@@ -9,9 +11,50 @@ const links = [
   { name: "Work", href: "/work" },
 ];
 export default function Header() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const pathName = usePathname();
+  const sidebar = document.getElementById("sidebar");
+  const openSidebarButton = document.getElementById('open-sidebar');
+
+  const openSidebarClickHandler = (evt) =>{
+    evt.stopPropagation();
+    setSidebarOpen(!sidebarOpen);
+  }
+  const closeSidebarClickHandler = (evt) =>{
+    evt.stopPropagation();
+    setSidebarOpen(false);
+  }
+
+  useEffect(()=>{
+    const globalClickHandler = ({ target }) => {
+      if(!sidebar.contains(target) && !openSidebarButton.contains(target)){
+        setSidebarOpen(false);
+      }
+    }
+    document.addEventListener('click', globalClickHandler);
+    return ()=> {document.removeEventListener("click", globalClickHandler);};
+  })
   return (
     <nav className="border-gray-200 bg-white">
+      {/* Sidebar */}
+      <div className={clsx("absolute bg-gray-800 text-white w-56 min-h-screen overflow-y-auto transition-transform transform ease-in-out duration-300",
+        {
+          '-translate-x-full': sidebarOpen === false,
+        })} id="sidebar">
+        <div className="p-4">
+          <h1 className="text-2xl font-semibold">导航</h1>
+          <ul className="mt-4">
+            {links.map((link) => (
+              <li key={link.name} className="mb-2">
+                <Link href={link.href}
+                      className="block hover:text-indigo-400"
+                      onClick={closeSidebarClickHandler}>{link.name}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      {/* Header elements */}
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
         <Link
           href="/"
@@ -22,6 +65,8 @@ export default function Header() {
           </span>
         </Link>
         <button
+          id="open-sidebar"
+          onClick={openSidebarClickHandler}
           data-collapse-toggle="navbar-default"
           type="button"
           className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
@@ -29,21 +74,7 @@ export default function Header() {
           aria-expanded="false"
         >
           <span className="sr-only">Open main menu</span>
-          <svg
-            className="h-5 w-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
+          <Bars3Icon className="h-6 w-6" />
         </button>
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 rtl:space-x-reverse">

@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { usePathname } from "next/navigation";
 
 const links = [
-  { name: '🪧介绍', href: '/work'},
+  { name: '🪧自我介绍', href: '/work'},
   { name: '🗂项目', href: '/work/projects'},
   { name: '🪄实验', href: '/work/experimental'},
 ]
