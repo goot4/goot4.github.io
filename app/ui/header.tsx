@@ -13,8 +13,6 @@ const links = [
 export default function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const pathName = usePathname();
-  const sidebar = document.getElementById("sidebar");
-  const openSidebarButton = document.getElementById('open-sidebar');
 
   const openSidebarClickHandler = (evt) =>{
     evt.stopPropagation();
@@ -27,6 +25,8 @@ export default function Header() {
 
   useEffect(()=>{
     const globalClickHandler = ({ target }) => {
+      const sidebar = document.getElementById("sidebar");
+      const openSidebarButton = document.getElementById('open-sidebar');
       if(!sidebar.contains(target) && !openSidebarButton.contains(target)){
         setSidebarOpen(false);
       }
