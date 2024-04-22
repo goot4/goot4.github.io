@@ -1,4 +1,7 @@
+import { randomUUID } from "node:crypto";
+
 export type ProjectInfo = {
+  id: string;
   name: string;
   description: string;
   keywords: string;
@@ -9,6 +12,7 @@ export type ProjectInfo = {
 
 export const projects: ProjectInfo[] = [
   {
+    id: randomUUID(),
     name: 'My Spotify App',
     description: 'This project are made as my first react app project. It\'s a song search tool.',
     keywords: 'Keywords: React, SPA(single page app), Spotify API, CSS Module.',

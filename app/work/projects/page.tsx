@@ -5,7 +5,7 @@ export default function Page(){
   return (
     <div className="grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
       {projects.map((project) => (
-        <div className="border-2 p-4">
+        <div key={project.id} className="border-2 p-4">
           <p className="mb-2">
             <Link
               href={project.projectUrl}
