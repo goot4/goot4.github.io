@@ -1,5 +1,7 @@
 # My personal Website
 
+Visit: [zeeebrag.pro](zeeebra.pro)
+
 ## What is the purpose of this website?
 
 1. Blog: recording what I have learnt.
