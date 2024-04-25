@@ -37,17 +37,17 @@ export default function Header() {
   return (
     <nav className="border-gray-200 bg-white">
       {/* Sidebar */}
-      <div className={clsx("absolute bg-gray-800 text-white w-56 min-h-screen overflow-y-auto transition-transform transform ease-in-out duration-300",
+      <div className={clsx("absolute bg-gray-800 text-white w-64 min-h-screen overflow-y-auto transition-transform transform ease-in-out duration-300",
         {
           '-translate-x-full': sidebarOpen === false,
         })} id="sidebar">
-        <div className="p-4">
-          <h1 className="text-2xl font-semibold">导航</h1>
+        <div className="px-8 pt-4 text-right">
+          <h1 className="text-3xl font-semibold">导航</h1>
           <ul className="mt-4">
             {links.map((link) => (
-              <li key={link.name} className="mb-2">
+              <li key={link.name} className="mb-4">
                 <Link href={link.href}
-                      className="block hover:text-indigo-400"
+                      className="block text-xl hover:text-indigo-400"
                       onClick={closeSidebarClickHandler}>{link.name}</Link>
               </li>
             ))}

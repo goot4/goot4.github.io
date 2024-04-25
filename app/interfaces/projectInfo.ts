@@ -14,7 +14,7 @@ export const projects: ProjectInfo[] = [
   {
     id: randomUUID(),
     name: 'My Spotify App',
-    description: 'This project are made as my first react app project. It\'s a song search tool.',
+    description: 'This project are made as my first react app project. It\'s a song search tool. (Note: layout only for PC devices',
     keywords: 'Keywords: React, SPA(single page app), Spotify API, CSS Module.',
     code: 'https://github.com/goot4/my-spotify-app',
     projectUrl: 'https://goot4.github.io/my-spotify-app/',

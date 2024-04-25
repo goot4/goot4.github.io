@@ -10,7 +10,7 @@ const overrideComponents = {
   p: ({ children}) => <p className="text-base mb-2">{children}</p>,
   ul: ({ children}) => <ul className="mb-2">{children}</ul>,
   li: ({ children}) => <li className="text-lg ml-4 list-disc">{children}</li>,
-  pre: ({ children }) => <pre className="px-4 py-2 rounded-lg w-full text-gray-300 bg-gray-900 overflow-hidden">{children}</pre>,
+  pre: ({ children }) => <pre className="px-4 py-2 rounded-lg w-full text-gray-300 bg-gray-900 overflow-auto ">{children}</pre>,
 }
 
 export default function Page({params}: {params: {slug: string}}) {
