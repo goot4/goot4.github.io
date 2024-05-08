@@ -8,10 +8,12 @@ const overrideComponents = {
   h3: ({ children }) => <h3 className="my-3 text-xl">{children}</h3>,
   a: ({ children, href }) => <a href={href} className="text-blue-500" target="_blank">{children}</a>,
   p: ({ children}) => <p className="text-base mb-2">{children}</p>,
-  ul: ({ children}) => <ul className="mb-2">{children}</ul>,
-  li: ({ children}) => <li className="text-lg ml-4 list-disc">{children}</li>,
+  ul: ({ children}) => <ul className="mb-2 list-disc">{children}</ul>,
+  ol: ({ children}) => <ol className="mb-2 list-decimal">{children}</ol>,
+  li: ({ children}) => <li className="text-lg ml-4">{children}</li>,
   pre: ({ children }) => <pre className="px-4 py-2 rounded-lg w-full text-gray-300 bg-gray-900 overflow-auto ">{children}</pre>,
-  code: ({ children }) => <code className={"text-gray-300 bg-gray-900 mx-1 px-1 rounded"}>{children}</code>
+  code: ({ children }) => <code className={"text-gray-300 bg-gray-900 mx-1 px-1 rounded"}>{children}</code>,
+  blockquote: ({ children}) => <blockquote className={"italic"}>{children}</blockquote>,
 }
 
 export default function Page({params}: {params: {slug: string}}) {
