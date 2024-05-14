@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Bars3Icon } from "@heroicons/react/24/outline"
+import { disableScroll, enableScroll } from "@/app/lib/disableScroller.js";
 
 const links = [
   { name: "Home", href: "/" },
@@ -17,10 +18,12 @@ export default function Header() {
   const openSidebarClickHandler = (evt) =>{
     evt.stopPropagation();
     setSidebarOpen(!sidebarOpen);
+    disableScroll();
   }
   const closeSidebarClickHandler = (evt) =>{
     evt.stopPropagation();
     setSidebarOpen(false);
+    enableScroll();
   }
 
   useEffect(()=>{
@@ -29,6 +32,7 @@ export default function Header() {
       const openSidebarButton = document.getElementById('open-sidebar');
       if(!sidebar.contains(target) && !openSidebarButton.contains(target)){
         setSidebarOpen(false);
+        enableScroll();
       }
     }
     document.addEventListener('click', globalClickHandler);
