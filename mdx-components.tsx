@@ -7,6 +7,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h3: ({ children }) => <h3 className="my-3 text-xl">{children}</h3>,
     a: ({ children, href }) => <a href={href} className="text-blue-500">{children}</a>,
     p: ({ children}) => <p className="text-base mb-2">{children}</p>,
+    strong : ({children}) => <strong className="font-bold">{children}</strong>,
     ul: ({ children}) => <ul className="mb-2 list-disc">{children}</ul>,
     ol: ({ children}) => <ol className="mb-2 list-decimal">{children}</ol>,
     li: ({ children}) => <li className="text-lg ml-4">{children}</li>,

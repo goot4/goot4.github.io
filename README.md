@@ -1,6 +1,6 @@
 # My personal Website
 
-Visit: [zeeebrag.pro](zeeebra.pro)
+Visit: [zeeebrag.pro](https://zeeebrag.pro)
 
 ## What is the purpose of this website?
 
