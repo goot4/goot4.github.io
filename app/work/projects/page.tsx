@@ -13,7 +13,7 @@ export default function Page(){
               className="text-2xl underline"
             >{project.name}</Link>
           </p>
-          <p className="mb-2 grow">{project.description}</p>
+          <p className="mb-2 grow whitespace-pre-line">{project.description}</p>
           <p className="mb-2 text-sm">{project.keywords}</p>
           <div>
             <Link href={project.code} target="_blank" className="underline">Code</Link>

@@ -38,5 +38,16 @@ export const projects: ProjectInfo[] = [
     projectUrl: 'https://kanban.zeeebrag.pro/',
     date: '2024-04'
   },
+]
 
+export const experimental: ProjectInfo[] = [
+  {
+    id: randomUUID(),
+    name: 'React State Management',
+    description: '我的第一个实验项目, 内容包括:\n 1. 一个使用Context和Reducer的样例;\n 2. 使用shadcnUI进行主题切换;\n 3. 使用Render.com进行静态部署;',
+    keywords: 'Keywords: React Context/Reducer, Dark Mode, Static Deployment',
+    code: 'https://github.com/goot4/react-state-management.git',
+    projectUrl: 'https://react-state-management-3pxy.onrender.com',
+    date: '2024-05'
+  },
 ]
