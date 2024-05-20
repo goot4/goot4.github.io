@@ -2,7 +2,7 @@ import Welcome from "@/content/welcome.mdx";
 // Home page
 export default function Page() {
   return (
-    <div className="flex h-screen flex-row items-start bg-green-300">
+    <div className="flex h-screen pt-16 flex-row items-start bg-green-300">
       <div className="w-full rounded-md bg-zinc-800/50 px-6 py-16 text-white md:ml-16 md:mt-4 md:w-1/3">
         <Welcome />
       </div>

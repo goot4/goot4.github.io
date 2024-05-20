@@ -39,7 +39,7 @@ export default function Header() {
     return ()=> {document.removeEventListener("click", globalClickHandler);};
   })
   return (
-    <nav className="border-gray-200 bg-white">
+    <nav className="fixed w-full border-gray-200 bg-white">
       {/* Sidebar */}
       <div className={clsx("absolute bg-gray-800 text-white w-64 min-h-screen overflow-y-auto transition-transform transform ease-in-out duration-300",
         {

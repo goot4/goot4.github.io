@@ -43,6 +43,15 @@ export const projects: ProjectInfo[] = [
 export const experimental: ProjectInfo[] = [
   {
     id: randomUUID(),
+    name: 'Next App Route',
+    description: '对Nextjs App Router的实验项目, 内容包括: 用not-found, error, loading文件进行对应路由功能.',
+    keywords: 'Keywords: Next App Router',
+    code: 'https://github.com/goot4/next-app-route-experimental.git',
+    projectUrl: 'https://next-app-route-experimental.onrender.com',
+    date: '2024-05'
+  },
+  {
+    id: randomUUID(),
     name: 'React State Management',
     description: '我的第一个实验项目, 内容包括:\n 1. 一个使用Context和Reducer的样例;\n 2. 使用shadcnUI进行主题切换;\n 3. 使用Render.com进行静态部署;',
     keywords: 'Keywords: React Context/Reducer, Dark Mode, Static Deployment',
