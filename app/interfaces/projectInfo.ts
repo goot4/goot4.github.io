@@ -13,7 +13,16 @@ export type ProjectInfo = {
 export const projects: ProjectInfo[] = [
   {
     id: randomUUID(),
-    name: 'Daka App (手机/电脑端 网页)',
+    name: '租房还是买房?计算工具 (手机/电脑端 网页)',
+    description: '配合科普文章做的租售比计算工具, 主要使用数据可视化技术',
+    keywords: 'Keywords: React, Nextjs, daisyui, EChart.',
+    code: 'https://github.com/goot4/buy-or-rent-calculator.git',
+    projectUrl: 'https://buyorrent.zeeebrag.pro/',
+    date: '2024-05'
+  },
+  {
+    id: randomUUID(),
+    name: '打卡工具 (手机/电脑端 网页)',
     description: '这是一个工具类App, 具体功能是记录,管理打卡和对打卡数据的统计以及可视化展示.',
     keywords: 'Keywords: React, Nextjs, ShadcnUI, EChart.',
     code: 'https://github.com/goot4/my-daka-app',
@@ -31,7 +40,7 @@ export const projects: ProjectInfo[] = [
   },
   {
     id: randomUUID(),
-    name: 'Kanban App (电脑端网页)',
+    name: '看板工具 (电脑端网页)',
     description: '一个功能完备, 风格优美, 使用简单的看板App. 这个项目展示了如何拖拽网页元素, 如何做数据的编辑, 呈现, 保存和如何做风格统一的UI. ',
     keywords: 'Keywords: React SPA, Tailwindcss, daisyui, dnd-kit, gh-pages.',
     code: 'https://github.com/goot4/my-kanban-app',
