@@ -13,6 +13,15 @@ export type ProjectInfo = {
 export const projects: ProjectInfo[] = [
   {
     id: randomUUID(),
+    name: '今天喝什么? (手机/电脑端 网页)',
+    description: '咖啡知识相关的科普网站, 同时支持中英双语言',
+    keywords: 'Keywords: React, Nextjs, dynamic routes, middle ware, daisyui, next-intl.',
+    code: 'https://github.com/goot4/what-to-drink.git',
+    projectUrl: 'https://drink.zeeebrag.pro/',
+    date: '2024-06'
+  },
+  {
+    id: randomUUID(),
     name: '租房还是买房?计算工具 (手机/电脑端 网页)',
     description: '配合科普文章做的租售比计算工具, 主要使用数据可视化技术',
     keywords: 'Keywords: React, Nextjs, daisyui, EChart.',
