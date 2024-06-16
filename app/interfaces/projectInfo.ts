@@ -13,6 +13,15 @@ export type ProjectInfo = {
 export const projects: ProjectInfo[] = [
   {
     id: randomUUID(),
+    name: 'AI聊天APP (模仿ChatGPT)',
+    description: '使用OpenRouter提供的人工智能模型和API, 实现常见的AI聊天功能',
+    keywords: 'Keywords: React, Nextjs, Open Router, Material UI.',
+    code: 'https://github.com/goot4/chatgpt-mock.git',
+    projectUrl: 'https://chatgpt-mock.onrender.com',
+    date: '2024-06'
+  },
+  {
+    id: randomUUID(),
     name: '今天喝什么? (手机/电脑端 网页)',
     description: '咖啡知识相关的科普网站, 同时支持中英双语言',
     keywords: 'Keywords: React, Nextjs, dynamic routes, middle ware, daisyui, next-intl.',
