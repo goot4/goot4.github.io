@@ -11,14 +11,51 @@ date: "2024-08-04"
 
 这里以深圳城镇单位就业缴纳保险为例:
 
-| 类型     | 缴费比例(企业+个人) | 缴费基数 |
-| ------ | ----------- | ---- |
-| 养老     | 15% + 8%    | 月工资  |
-| 医疗(1档) | 5% + 2%     | 月工资  |
-| 失业     | 0.8% + 0.2% | 月工资  |
-| 生育     | 无个人         | -    |
-| 工伤     | 无个人         | -    |
-| 公积金    | 5% + 5%     | 月工资  |
+<div className="overflow-x-auto">
+  <table className="min-w-full border-collapse my-4">
+    <thead className="bg-transparent">
+    <tr>
+      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider border">类型</th>
+      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider border">缴费比例(企业+个人)</th>
+      <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider border">缴费基数</th>
+    </tr>
+    </thead>
+    <tbody className="bg-transparent">
+    <tr>
+      <td className="px-6 py-4 whitespace-nowrap text-sm border">养老</td>
+      <td className="px-6 py-4 whitespace-nowrap text-sm border">15% + 8%</td>
+      <td className="px-6 py-4 whitespace-nowrap text-sm border">月工资</td>
+    </tr>
+    <tr>
+      <td className="px-6 py-4 whitespace-nowrap text-sm border">医疗(1档)</td>
+      <td className="px-6 py-4 whitespace-nowrap text-sm border">5% + 2%</td>
+      <td className="px-6 py-4 whitespace-nowrap text-sm border">月工资</td>
+    </tr>
+    <tr>
+      <td className="px-6 py-4 whitespace-nowrap text-sm border">失业</td>
+      <td className="px-6 py-4 whitespace-nowrap text-sm border">0.8% + 0.2%</td>
+      <td className="px-6 py-4 whitespace-nowrap text-sm border">月工资</td>
+    </tr>
+    <tr>
+      <td className="px-6 py-4 whitespace-nowrap text-sm border">生育</td>
+      <td className="px-6 py-4 whitespace-nowrap text-sm border">无个人</td>
+      <td className="px-6 py-4 whitespace-nowrap text-sm border">-</td>
+    </tr>
+    <tr>
+      <td className="px-6 py-4 whitespace-nowrap text-sm border">工伤</td>
+      <td className="px-6 py-4 whitespace-nowrap text-sm border">无个人</td>
+      <td className="px-6 py-4 whitespace-nowrap text-sm border">-</td>
+    </tr>
+    <tr>
+      <td className="px-6 py-4 whitespace-nowrap text-sm border">公积金</td>
+      <td className="px-6 py-4 whitespace-nowrap text-sm border">5% + 5%</td>
+      <td className="px-6 py-4 whitespace-nowrap text-sm border">月工资</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
 故最后所得工资= 税前工资 - (8%+2% + 0.2%+5%) X 缴费基数 - 个人所得税.
 
 **特点**:
