@@ -2,7 +2,7 @@
 title: 打卡App开发记录
 date: 2024-05-16 00:00:00 +0800
 ---
-本文记录我开发工具类项目打卡App. 主要工具包括: React, Nextjs, tailwindcss, shadcnUI, Echart. 目前项目已做出功能完全的初版, 后续可能会对UI方面进行优化.
+本文记录我开发工具类项目打卡App. 主要工具包括: React, Nextjs, tailwindcss, shadcnUI, Echart.
 
 查看项目[网站](https://daka.zeeebrag.pro)和[代码](https://github.com/goot4/my-daka-app).
 
@@ -15,10 +15,12 @@ date: 2024-05-16 00:00:00 +0800
 App的大部分UI使用ShadcnUI成熟的组件进行组合, 这些组件的可自定制化程度基本能够满足需求.
 
 **颜色主题**: 引入ShadcnUI时会引入一系列的主题颜色, 关于这些主题颜色的自定制化还未作研究. 目前使用默认. 关于明暗模式也未做具体实验.
+
 ## 数据
 
 - **数据读取**: 在`useEffect`中使用`localStorage`将读取数据.
 - **数据保存**: 在每次数据被修改之后使用`localStorage`保存数据
+
 ### 关于日期
 
 最初日期的数据结构用的是Date, 但是Date在存储再读取后会变成string, 因此会造成数据类型上的不匹配. 因此最后选择使用number类型的TimeStamp作为日期的数据结构, 在需要展示或者做分析的时候再转换成Date类型.
