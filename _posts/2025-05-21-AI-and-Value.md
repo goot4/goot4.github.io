@@ -4,7 +4,7 @@ date: 2025-05-21 00:37:00 +0800
 tags:
   - ai
 ---
-I read a very interesting [article](Jevons Paradox: A personal perspective) this week, it mainly discussed why increased productivity can lead to more work. and I'd like to share some thinking about it.
+I read a very interesting [article](https://fakepixels.substack.com/p/jevons-paradox-a-personal-perspective) this week, it mainly discussed why increased productivity can lead to more work. and I'd like to share some thinking about it.
 
 ## What is this article about?
 I should proclaim that this is not a AI-summarizing-article-like paragraph. I am going to list some interesting points in the article, and I restate them in my own words so I can remember them better:
