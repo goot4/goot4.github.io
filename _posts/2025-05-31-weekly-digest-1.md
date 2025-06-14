@@ -1,6 +1,7 @@
 ---
 title: Weekly Digest 1
 date: 2025-05-31 02:29:00 +0800
+category: digest
 tags:
   - reading
 ---
