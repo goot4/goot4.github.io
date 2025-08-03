@@ -29,7 +29,7 @@ Con:
 [Vibe code is legacy code](https://blog.val.town/vibe-code): vibe coding is good for short-term prototypes, serious coding is good for real products. Both of them can be enhanced by AI in different ways.
 
 ### LLM Application
-[Learning the Bitter Lesson](http://rlancemartin.github.io/2025/07/30/bitter_lesson/)
+[Learning the Bitter Lesson](https://rlancemartin.github.io/2025/07/30/bitter_lesson/)
 > 1. Understand your application structure
 > 2. Re-evaluate your structure as models improve
 > 3. Make it easy to remove structure
