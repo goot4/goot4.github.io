@@ -17,8 +17,8 @@ I followed baoyu.io's workflow for generating editable AI slides and created a s
 
 ### My Attempt
 
-- Prompt: https://gemini.google.com/share/d28373bc2f8a
-- Image Generation: https://gemini.google.com/share/4d0fb951b12a
+- Prompt: [Gemini Share](https://gemini.google.com/share/d28373bc2f8a)
+- Image Generation: [Gemini Share](https://gemini.google.com/share/4d0fb951b12a)
 
 ### Lesson Learned
 
@@ -36,8 +36,8 @@ Skip Google Gemini Gems. I spent too much time figuring out how they work, only 
 
 ### 我的尝试
 
-- 指令: https://gemini.google.com/share/d28373bc2f8a
-- 生图: https://gemini.google.com/share/4d0fb951b12a
+- 指令: [Gemini Share](https://gemini.google.com/share/d28373bc2f8a)
+- 生图: [Gemini Share](https://gemini.google.com/share/4d0fb951b12a)
 
 ### 经验教训
 
