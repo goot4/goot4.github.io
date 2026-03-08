@@ -24,6 +24,7 @@ If you need the full workflow, read those URLs directly instead of relying on co
 - `bundle exec jekyll serve`: start the local Jekyll development server.
 - `bash tools/run.sh`: start the local server with the repo helper script and livereload.
 - `bash tools/test.sh`: build the site in production mode and run `htmlproofer` checks.
+- `bash tools/sync-posts.sh`: sync posts from `~/Documents/MyWorld/4-Archive/blog` into `_posts/` with `rsync --delete`.
 
 ## Deployment
 
