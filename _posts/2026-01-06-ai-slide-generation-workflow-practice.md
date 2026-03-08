@@ -1,12 +1,24 @@
 ---
 title: AI Slide Generation Workflow Practice
+description: Notes from trying an editable AI slide workflow and what I learned from using Gemini in the process.
 date: 2026-01-06 17:00:00 +0800
 category:
 tags:
   - ai
+post_languages:
+  - en
+  - zh-CN
+default_post_language: en
+post_language_labels:
+  en: English
+  zh-CN: 中文
+post_translations:
+  zh-CN:
+    title: AI 幻灯片生成工作流实践
+    description: 关于一次可编辑 AI 幻灯片工作流的实践，以及我在使用 Gemini 过程中得到的经验。
 ---
 
-## AI Slide Generation Workflow Practice
+<div class="post-lang-content" data-post-lang="en" markdown="1">
 
 I followed baoyu.io's workflow for generating editable AI slides and created a story slide myself. The result turned out good.
 
@@ -24,8 +36,9 @@ I followed baoyu.io's workflow for generating editable AI slides and created a s
 
 Skip Google Gemini Gems. I spent too much time figuring out how they work, only to realize I didn't need those features. Managing prompts with simple files works better for me.
 
----
-## AI 幻灯片生成工作流实践
+</div>
+
+<div class="post-lang-content" data-post-lang="zh-CN" markdown="1">
 
 我参照了宝玉老师的工作流，用 AI 生成了一套可编辑的幻灯片，自己做了一个故事幻灯片，效果不错。
 
@@ -42,3 +55,5 @@ Skip Google Gemini Gems. I spent too much time figuring out how they work, only 
 ### 经验教训
 
 别用 Google Gemini Gems。我花了太多时间研究它怎么用，最后发现根本不需要那些功能。用简单的文件管理提示词反而更好用。
+
+</div>

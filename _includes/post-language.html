@@ -1,0 +1,172 @@
+{% assign post_languages = page.post_languages | default: empty %}
+{% if post_languages.size > 0 %}
+  {% assign default_post_language = page.default_post_language | default: post_languages.first %}
+  {% unless post_languages contains default_post_language %}
+    {% assign default_post_language = post_languages.first %}
+  {% endunless %}
+
+  <script>
+    (() => {
+      const article = document.querySelector('.post-multilingual');
+
+      if (!article) {
+        return;
+      }
+
+      const config = {
+        languages: {{ post_languages | jsonify }},
+        defaultLanguage: {{ default_post_language | jsonify }},
+        defaultTitle: {{ page.title | jsonify }},
+        defaultDescription: {{ page.description | jsonify }},
+        translations: {{ page.post_translations | default: empty | jsonify }},
+        storageKey: 'chirpy-post-language'
+      };
+
+      const sections = Array.from(article.querySelectorAll('.post-lang-content[data-post-lang]'));
+
+      if (!sections.length) {
+        return;
+      }
+
+      const title = document.getElementById('post-title');
+      const description = document.getElementById('post-description');
+      const switcher = document.querySelector('.post-language-switcher');
+      const switcherList = switcher?.querySelector('.post-language-switcher__list') || null;
+      const buttons = Array.from(document.querySelectorAll('[data-post-lang-trigger]'));
+      const sectionLanguages = sections.map((section) => section.dataset.postLang);
+      const availableLanguages = config.languages.filter((lang) => sectionLanguages.includes(lang));
+
+      if (!availableLanguages.length) {
+        sections.forEach((section, index) => {
+          const isActive = index === 0;
+          section.hidden = !isActive;
+          section.classList.toggle('is-active', isActive);
+          section.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+        });
+
+        return;
+      }
+
+      const readStoredLanguage = () => {
+        try {
+          return window.localStorage.getItem(config.storageKey);
+        } catch (_) {
+          return null;
+        }
+      };
+
+      const writeStoredLanguage = (lang) => {
+        try {
+          window.localStorage.setItem(config.storageKey, lang);
+        } catch (_) {}
+      };
+
+      buttons.forEach((button) => {
+        const buttonLanguage = button.dataset.postLangTrigger;
+        const isValid = availableLanguages.includes(buttonLanguage);
+
+        button.hidden = !isValid;
+        button.disabled = !isValid;
+      });
+
+      if (switcher) {
+        const visibleButtons = buttons.filter((button) => !button.hidden);
+        switcher.hidden = visibleButtons.length < 2;
+        if (switcherList) {
+          switcherList.style.setProperty('--post-language-count', String(Math.max(visibleButtons.length, 1)));
+        }
+      }
+
+      const getMetadata = (lang) => {
+        if (!config.translations || typeof config.translations !== 'object') {
+          return {};
+        }
+
+        return config.translations[lang] || {};
+      };
+
+      const updateUrl = (lang) => {
+        const url = new URL(window.location.href);
+
+        if (lang === config.defaultLanguage) {
+          url.searchParams.delete('lang');
+        } else {
+          url.searchParams.set('lang', lang);
+        }
+
+        window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
+      };
+
+      const applyLanguage = (lang, options = {}) => {
+        const persist = options.persist !== false;
+        const syncUrl = options.syncUrl !== false;
+        const nextLanguage = availableLanguages.includes(lang) ? lang : availableLanguages[0];
+        const metadata = getMetadata(nextLanguage);
+        const nextTitle =
+          typeof metadata.title === 'string' && metadata.title.length > 0 ? metadata.title : config.defaultTitle;
+        const nextDescription =
+          typeof metadata.description === 'string' && metadata.description.length > 0
+            ? metadata.description
+            : config.defaultDescription;
+
+        sections.forEach((section) => {
+          const isActive = section.dataset.postLang === nextLanguage;
+          section.hidden = !isActive;
+          section.classList.toggle('is-active', isActive);
+          section.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+        });
+
+        buttons.forEach((button) => {
+          const isActive = button.dataset.postLangTrigger === nextLanguage;
+          button.classList.toggle('active', isActive);
+          button.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
+
+        if (switcherList) {
+          const visibleButtons = buttons.filter((button) => !button.hidden);
+          const nextIndex = visibleButtons.findIndex((button) => button.dataset.postLangTrigger === nextLanguage);
+          switcherList.style.setProperty('--post-language-index', String(Math.max(nextIndex, 0)));
+        }
+
+        if (title && typeof nextTitle === 'string' && nextTitle.length > 0) {
+          title.textContent = nextTitle;
+        }
+
+        if (description) {
+          if (typeof nextDescription === 'string' && nextDescription.length > 0) {
+            description.textContent = nextDescription;
+            description.hidden = false;
+          } else {
+            description.hidden = true;
+          }
+        }
+
+        article.dataset.activePostLanguage = nextLanguage;
+
+        if (persist) {
+          writeStoredLanguage(nextLanguage);
+        }
+
+        if (syncUrl) {
+          updateUrl(nextLanguage);
+        }
+      };
+
+      const urlLanguage = new URL(window.location.href).searchParams.get('lang');
+      const storedLanguage = readStoredLanguage();
+      const initialLanguage =
+        [urlLanguage, storedLanguage, config.defaultLanguage, availableLanguages[0]].find((lang) =>
+          availableLanguages.includes(lang)
+        ) || availableLanguages[0];
+
+      applyLanguage(initialLanguage, { persist: false, syncUrl: false });
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          applyLanguage(button.dataset.postLangTrigger);
+        });
+      });
+    })();
+  </script>
+{% endif %}

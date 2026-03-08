@@ -1,0 +1,31 @@
+{% assign post_languages = page.post_languages | default: empty %}
+{% if post_languages.size > 1 %}
+  {% assign default_post_language = page.default_post_language | default: post_languages.first %}
+  {% unless post_languages contains default_post_language %}
+    {% assign default_post_language = post_languages.first %}
+  {% endunless %}
+
+  <div class="post-language-switcher mb-4" aria-label="Post languages">
+    <div
+      class="post-language-switcher__list"
+      role="tablist"
+      aria-label="Post languages"
+      style="--post-language-count: {{ post_languages.size }}; --post-language-index: 0;"
+    >
+      <span class="post-language-switcher__indicator" aria-hidden="true"></span>
+      {% for post_lang in post_languages %}
+        {% assign post_lang_label = page.post_language_labels[post_lang] | default: post_lang %}
+        <button
+          type="button"
+          class="post-language-switcher__button{% if post_lang == default_post_language %} active{% endif %}"
+          data-post-lang-trigger="{{ post_lang }}"
+          role="tab"
+          aria-selected="{% if post_lang == default_post_language %}true{% else %}false{% endif %}"
+          aria-pressed="{% if post_lang == default_post_language %}true{% else %}false{% endif %}"
+        >
+          {{ post_lang_label }}
+        </button>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
