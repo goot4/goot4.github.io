@@ -1,0 +1,31 @@
+# AGENTS.md
+
+This repo is a personal blog built on `jekyll-theme-chirpy` via `chirpy-starter`.
+
+## Start Here
+
+- Upgrade guide: https://github.com/cotes2020/jekyll-theme-chirpy/wiki/Upgrade-Guide
+- Local run guide: https://chirpy.cotes.page/posts/getting-started/
+
+If you need the full workflow, read those URLs directly instead of relying on copied instructions here.
+
+## Repo Notes
+
+- The upstream starter remote is already configured as `chirpy`.
+- Main config is in `_config.yml`.
+- Posts live in `_posts/`.
+- Tabs live in `_tabs/`.
+- Generated output is `_site/`; do not edit it manually.
+- `assets/lib` is a git submodule; avoid changing it unless the task is explicitly about static assets or upgrades.
+
+## Common Commands
+
+- `bundle install`: install Ruby gem dependencies for the site.
+- `bundle exec jekyll serve`: start the local Jekyll development server.
+- `bash tools/run.sh`: start the local server with the repo helper script and livereload.
+- `bash tools/test.sh`: build the site in production mode and run `htmlproofer` checks.
+
+## Deployment
+
+- GitHub Pages deploy workflow: `.github/workflows/pages-deploy.yml`
+- Pushes to `main` trigger deployment.
