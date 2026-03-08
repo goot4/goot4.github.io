@@ -26,6 +26,15 @@ If you need the full workflow, read those URLs directly instead of relying on co
 - `bash tools/test.sh`: build the site in production mode and run `htmlproofer` checks.
 - `bash tools/sync-posts.sh`: sync posts from `~/Documents/MyWorld/4-Archive/blog` into `_posts/` with `rsync --delete`.
 
+## Post Workflow
+
+- New posts are written first in the Obsidian blog folder: `~/Documents/MyWorld/4-Archive/blog`.
+- When working on posts, sync from `~/Documents/MyWorld/4-Archive/blog` into `_posts/` first.
+- After syncing into `_posts/`, start the local server and check the rendered post in the browser.
+- If the post needs fixes, make the changes in this repo copy under `_posts/` and re-check locally.
+- If a post was modified in this repo during review or implementation, then after finishing the changes and committing them, sync the updated post files back to `~/Documents/MyWorld/4-Archive/blog`.
+- Syncing back to the Obsidian blog folder should be non-destructive; do not delete unrelated files there.
+
 ## Deployment
 
 - GitHub Pages deploy workflow: `.github/workflows/pages-deploy.yml`
