@@ -1,0 +1,149 @@
+{% assign watch_url = include.url %}
+{% assign youtube_title = include.title | default: "YouTube Video" %}
+{% assign youtube_meta = include.channel | default: include.creator | default: include.meta | default: "YouTube" %}
+{% assign youtube_description = include.description %}
+{% assign youtube_thumbnail = include.thumbnail %}
+
+{% if youtube_thumbnail == nil and include.video_id %}
+  {% assign youtube_thumbnail = "https://i.ytimg.com/vi/" | append: include.video_id | append: "/hqdefault.jpg" %}
+{% endif %}
+
+<style>
+  .youtube-card {
+    margin: 1.5rem 0;
+    border: 1px solid rgba(255, 0, 0, 0.18);
+    border-radius: 1.25rem;
+    background:
+      radial-gradient(circle at top left, rgba(255, 0, 0, 0.16), transparent 40%),
+      linear-gradient(135deg, rgba(255, 0, 0, 0.08), rgba(255, 0, 0, 0.02));
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  }
+
+  .youtube-card .youtube-card__body {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr) auto;
+    gap: 1.15rem;
+    align-items: center;
+    padding: 1.15rem;
+  }
+
+  .youtube-card .youtube-card__cover,
+  .youtube-card .youtube-card__cover-placeholder {
+    width: 220px;
+    height: 124px;
+    border-radius: 1rem;
+  }
+
+  .youtube-card .youtube-card__cover {
+    object-fit: cover;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+  }
+
+  .youtube-card .youtube-card__cover-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff0000, #991b1b);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .youtube-card .youtube-card__title {
+    margin: 0;
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+
+  .youtube-card .youtube-card__meta,
+  .youtube-card .youtube-card__description {
+    margin: 0.2rem 0 0;
+    color: rgba(107, 114, 128, 0.95);
+  }
+
+  .youtube-card .youtube-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: flex-end;
+  }
+
+  .youtube-card .youtube-card__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.5rem;
+    padding: 0.7rem 1.15rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-family: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    box-shadow: 0 10px 24px rgba(255, 0, 0, 0.24);
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .youtube-card .youtube-card__link:hover,
+  .youtube-card .youtube-card__link:active,
+  .youtube-card .youtube-card__link:focus-visible {
+    background: #fff;
+    color: #ff0000;
+  }
+
+  @media (max-width: 576px) {
+    .youtube-card .youtube-card__body {
+      grid-template-columns: 1fr;
+    }
+
+    .youtube-card .youtube-card__cover,
+    .youtube-card .youtube-card__cover-placeholder {
+      width: 100%;
+      max-width: 220px;
+      height: 124px;
+    }
+
+    .youtube-card .youtube-card__actions {
+      justify-content: flex-start;
+    }
+  }
+</style>
+
+<div class="youtube-card">
+  <div class="youtube-card__body">
+    {% if youtube_thumbnail %}
+      <img
+        class="youtube-card__cover"
+        src="{{ youtube_thumbnail }}"
+        alt="{{ youtube_title | escape }} thumbnail"
+        loading="lazy"
+      >
+    {% else %}
+      <div class="youtube-card__cover-placeholder">YouTube</div>
+    {% endif %}
+
+    <div>
+      <h3 class="youtube-card__title">{{ youtube_title }}</h3>
+      <p class="youtube-card__meta">{{ youtube_meta }}</p>
+
+      {% if youtube_description %}
+        <p class="youtube-card__description">{{ youtube_description }}</p>
+      {% endif %}
+    </div>
+
+    <div class="youtube-card__actions">
+      <button
+        class="youtube-card__link"
+        onclick="window.open('{{ watch_url }}', '_blank', 'noopener,noreferrer')"
+        type="button"
+      >Open in YouTube</button>
+    </div>
+  </div>
+</div>
