@@ -1,0 +1,133 @@
+{% assign clean_url = include.url | split: '?' | first %}
+
+<style>
+  .spotify-track-card {
+    margin: 1.5rem 0;
+    border: 1px solid rgba(29, 185, 84, 0.22);
+    border-radius: 1.25rem;
+    background:
+      radial-gradient(circle at top left, rgba(29, 185, 84, 0.16), transparent 40%),
+      linear-gradient(135deg, rgba(29, 185, 84, 0.08), rgba(29, 185, 84, 0.02));
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  }
+
+  .spotify-track-card__body {
+    display: grid;
+    grid-template-columns: 132px minmax(0, 1fr) auto;
+    gap: 1.15rem;
+    align-items: center;
+    padding: 1.15rem;
+  }
+
+  .spotify-track-card__cover,
+  .spotify-track-card__cover-placeholder {
+    width: 132px;
+    height: 132px;
+    border-radius: 1rem;
+  }
+
+  .spotify-track-card__cover {
+    object-fit: cover;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+  }
+
+  .spotify-track-card__cover-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1db954, #0f7a38);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .spotify-track-card__title {
+    margin: 0;
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+
+  .spotify-track-card__artist,
+  .spotify-track-card__album {
+    margin: 0.2rem 0 0;
+    color: rgba(107, 114, 128, 0.95);
+  }
+
+  .spotify-track-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: flex-end;
+  }
+
+  .spotify-track-card__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.5rem;
+    padding: 0.7rem 1.15rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .spotify-track-card__link {
+    background: #1db954;
+    color: #fff !important;
+    box-shadow: 0 10px 24px rgba(29, 185, 84, 0.28);
+  }
+
+  @media (max-width: 576px) {
+    .spotify-track-card__body {
+      grid-template-columns: 1fr;
+    }
+
+    .spotify-track-card__cover,
+    .spotify-track-card__cover-placeholder {
+      width: 100%;
+      max-width: 160px;
+      height: 160px;
+    }
+
+    .spotify-track-card__actions {
+      justify-content: flex-start;
+    }
+  }
+</style>
+
+<div class="spotify-track-card">
+  <div class="spotify-track-card__body">
+    {% if include.cover %}
+      <img
+        class="spotify-track-card__cover"
+        src="{{ include.cover }}"
+        alt="{{ include.title | escape }} cover"
+        loading="lazy"
+      >
+    {% else %}
+      <div class="spotify-track-card__cover-placeholder">Spotify</div>
+    {% endif %}
+
+    <div>
+      <h3 class="spotify-track-card__title">{{ include.title }}</h3>
+      <p class="spotify-track-card__artist">{{ include.artist }}</p>
+
+      {% if include.album %}
+        <p class="spotify-track-card__album">{{ include.album }}</p>
+      {% endif %}
+    </div>
+
+    <div class="spotify-track-card__actions">
+      <a
+        class="spotify-track-card__link"
+        href="{{ clean_url }}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Open in Spotify</a>
+    </div>
+  </div>
+</div>
