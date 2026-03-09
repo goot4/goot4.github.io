@@ -4,7 +4,11 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-我是一个兴趣广泛的前端工程师, 希望能不断学习新东西, 创造新东西. (✿◕‿◕)
+我是一个兴趣广泛的「软件 + AI」工程师, 希望能不断学习新东西, 创造新东西. (✿◕‿◕)
+
+---
+
+I am a broadly curious "software + AI" engineer. I want to keep learning new things and building new things. (✿◕‿◕)
 
 ```brand
 
