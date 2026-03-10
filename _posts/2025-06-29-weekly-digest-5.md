@@ -1,7 +1,7 @@
 ---
 title: Weekly Digest 5
 date: 2025-06-29 00:30:00 +0800
-category: digest
+category: notes
 tags:
   - reading
 ---

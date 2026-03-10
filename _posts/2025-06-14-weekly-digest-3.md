@@ -1,7 +1,7 @@
 ---
 title: Weekly Digest 3
 date: 2025-06-14 15:19:00 +0800
-category: digest
+category: notes
 tags:
   - reading
 ---

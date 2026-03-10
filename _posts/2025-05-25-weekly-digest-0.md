@@ -1,7 +1,7 @@
 ---
 title: Weekly Digest 0
 date: 2025-05-25 01:06:00 +0800
-category: digest
+category: notes
 tags:
   - reading
 ---

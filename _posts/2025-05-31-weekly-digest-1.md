@@ -1,7 +1,7 @@
 ---
 title: Weekly Digest 1
 date: 2025-05-31 02:29:00 +0800
-category: digest
+category: notes
 tags:
   - reading
 ---
@@ -62,4 +62,3 @@ Here are three things I think that are helpful to remind you if you are using th
 This post is going to be too long to write and read, so I will stop here.
 
 Simply put, I am going to try more audio things with AI, and share my experience in the near future.
-

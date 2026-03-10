@@ -1,7 +1,7 @@
 ---
 title: Weekly Digest 4
 date: 2025-06-21 14:08:00 +0800
-category: digest
+category: notes
 tags:
   - reading
 ---

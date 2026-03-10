@@ -1,7 +1,7 @@
 ---
 title: Weekly Digest 2
 date: 2025-06-07 01:29:00 +0800
-category: digest
+category: notes
 tags:
   - reading
 ---

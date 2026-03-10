@@ -1,7 +1,7 @@
 ---
 title: Weekly Digest 16
 date: 2025-09-12 23:00:00 +0800
-category: digest
+category: notes
 tags:
   - reading
 ---

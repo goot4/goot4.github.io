@@ -1,7 +1,7 @@
 ---
 title: Weekly Digest 10
 date: 2025-08-03 23:50:00 +0800
-category: digest
+category: notes
 tags:
   - reading
 ---

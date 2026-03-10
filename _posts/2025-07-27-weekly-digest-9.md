@@ -1,7 +1,7 @@
 ---
 title: Weekly Digest 9
 date: 2025-07-27 23:00:00 +0800
-category: digest
+category: notes
 tags:
   - reading
 ---

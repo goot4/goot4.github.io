@@ -1,7 +1,7 @@
 ---
 title: Weekly Digest 12
 date: 2025-08-17 23:00:00 +0800
-category: digest
+category: notes
 tags:
   - reading
 ---
