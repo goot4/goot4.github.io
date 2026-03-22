@@ -39,3 +39,5 @@ If you need the full workflow, read those URLs directly instead of relying on co
 
 - GitHub Pages deploy workflow: `.github/workflows/pages-deploy.yml`
 - Pushes to `main` trigger deployment.
+- Production site domain: `https://floriankyo.com`
+- When validating a deploy, check the live site on `https://floriankyo.com` and the expected post URL under `/posts/<slug>/`.
